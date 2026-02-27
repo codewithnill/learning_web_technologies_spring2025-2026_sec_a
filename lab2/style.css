@@ -1,0 +1,58 @@
+/* 1.html */
+#namebox{
+    width: 120px;
+    margin-bottom: 5px;
+}
+
+/* 2.html */
+#emailbox{
+    width: 120px;
+    margin-bottom: 5px;
+}
+
+/* 3.html */
+#fieldset{
+    width: 200px;
+    margin-bottom: -10px;
+}
+
+/* 4.html */
+
+
+.date-group {
+    display: inline-flex;
+    flex-direction: column;  /* Stack label above input */
+    margin-right: 2px;      /* Space between groups */
+    vertical-align: top;    /*  Align to top */
+}
+
+.textbox{
+    width: 50px;
+    display: inline-block;
+    margin-right: 2px;  /* Equal space to the right of each box */
+}
+
+/* 5.html */
+#submit5{
+    margin-top: 10px;
+}
+
+#fieldset5{
+    width: 180px;
+}
+
+
+
+/* 6.html */
+
+
+/* 7.html */
+
+#fieldset7{
+    width: 350px;
+}
+
+/* 8.html */
+#tableheader{
+    font-size: 30px;
+}
