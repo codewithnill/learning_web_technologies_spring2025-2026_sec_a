@@ -4,22 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>4</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="dob">
         <form>
-            <fieldset>
+            <fieldset id="fieldset">
                 <legend>Date of birth :</legend>
-                <label for="d">dd</label><br>
-                <input type="text" id="d" name="dd">
+                <div class="date-group">
+                    <label for="d">dd</label>
+                    <input type="text" id="tb1" class="textbox" name="dd">
+                </div>
                 
-                <br>
-                <label for="m">mm</label><br>
-                <input type="text" id="m" name="mm">
                 
-                <br>
-                <label for="y">yyyy</label><br>
-                <input type="text" id="y" name="yyyy">
+                <div class="date-group">
+                    <label for="m">mm</label>
+                    <input type="text" id="tb2" class="textbox" name="mm">
+                </div>
+                
+                
+                <div class="date-group">
+                    <label for="y">yyyy</label>
+                    <input type="text" id="tb3" class="textbox" name="yyyy">
+                </div>
                 
                 <br>
                 <hr>
