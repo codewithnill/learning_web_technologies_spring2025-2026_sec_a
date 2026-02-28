@@ -34,3 +34,34 @@ function validateName() { // for 1.html name validation
     alert('Valid name!');
     return true;
 }
+
+function validateEmail() {
+    const email = document.getElementById('emailbox1').value;
+    
+    // Cannot be empty
+    if (email.trim() === '') {
+        alert('Email cannot be empty');
+        return false;
+    }
+    
+    // Must contain @
+    if (email.indexOf('@') === -1) {
+        // .indexOf() -> Returns the index (position) of the first occurrence of a value in a string
+        alert('Email must contain @ symbol');
+        return false;
+    }
+    
+    // Check if dot comes after @
+    const atPosition = email.indexOf('@');
+    const afterAt = email.substring(atPosition + 1);
+    // .substring -> extracts characters from start to end (exclusive).
+
+    
+    if (afterAt.indexOf('.') === -1) {
+        alert('Email must contain dot (.) after @');
+        return false;
+    }
+    
+    alert('Valid email!');
+    return true;
+}
