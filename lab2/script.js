@@ -129,3 +129,33 @@ function validatedob() {
     alert('Valid date of birth!');
     return true;
 }
+
+
+// 5.html
+function validatedegree() {
+    const degreeboxes = document.getElementsByName('degree');
+    let selectedCount = 0;
+    
+    // Count how many are selected
+    for (let i = 0; i < degreeboxes.length; i++) {
+        if (degreeboxes[i].checked) {
+            selectedCount++;
+        }
+    }
+
+    // if selected none
+    if (selectedCount === 0) {
+        alert('Please select a degree');
+        return false;
+    }
+    
+    // if more than one
+    if (selectedCount > 1) {
+        alert('You can only select ONE degree');
+        return false;
+    }
+    
+    // Exactly one selected
+    alert('Degree selected!');
+    return true;
+}
