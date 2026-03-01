@@ -17,42 +17,57 @@
 }
 
 /* 4.html */
-
-
 .date-group {
+    /* 3 separate divs were taken for 2 textboxes */
     display: inline-flex;
-    flex-direction: column;  /* Stack label above input */
-    margin-right: 2px;      /* Space between groups */
-    vertical-align: top;    /*  Align to top */
+    flex-direction: column; 
+    margin-right: 2px;     /* Space between groups */
+    vertical-align: top;    /* Align to top */
 }
 
-.textbox{
+.dateboxes{
     width: 50px;
     display: inline-block;
     margin-right: 2px;  /* Equal space to the right of each box */
 }
 
+#dateset{
+    width: 200px;
+}
+
 /* 5.html */
-#submit5{
+#submitdegree{
     margin-top: 10px;
 }
 
-#fieldset5{
+#degreeset{
     width: 180px;
 }
 
 
 
 /* 6.html */
-
+#bloodgroupset{
+    border-style: none; /* disappearing the border */
+    width: 140px;
+    padding: 0px;
+}
 
 /* 7.html */
 
-#fieldset7{
-    width: 350px;
+#pp_and_id_set{
+    width: 310px;
 }
 
 /* 8.html */
 #tableheader{
     font-size: 30px;
+}
+
+.dob_box{
+    width: 40px;
+}
+
+.tabledata{
+    width: 20px;
 }
