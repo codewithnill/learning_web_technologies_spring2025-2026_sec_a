@@ -159,3 +159,17 @@ function validatedegree() {
     alert('Degree selected!');
     return true;
 }
+
+// 6.html
+function validatebloodgroup() {
+    const dropdown = document.getElementById('bloodgroup');
+    
+    // Check if an option is selected (selectedIndex is 0 or greater)
+    if (dropdown.selectedIndex === -1 || dropdown.value === '') {
+        alert('Please select a blood group');
+        return false;
+    }
+    
+    alert('Blood group selected: ' + dropdown.value);
+    return true;
+}
