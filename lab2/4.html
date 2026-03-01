@@ -7,25 +7,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <div class="dob">
-        <form>
-            <fieldset id="fieldset">
+        <form onsubmit="return validatedob">
+            <fieldset id="dateset">
                 <legend>Date of birth :</legend>
+
                 <div class="date-group">
-                    <label for="d">dd</label>
-                    <input type="text" id="tb1" class="textbox" name="dd">
+                    <label for="dd">dd</label>
+                    <input type="text" id="dd" class="dateboxes" name="dd">
                 </div>
                 
                 
                 <div class="date-group">
-                    <label for="m">mm</label>
-                    <input type="text" id="tb2" class="textbox" name="mm">
+                    <label for="mm">mm</label>
+                    <input type="text" id="mm" class="dateboxes" name="mm">
                 </div>
                 
                 
                 <div class="date-group">
                     <label for="y">yyyy</label>
-                    <input type="text" id="tb3" class="textbox" name="yyyy">
+                    <input type="text" id="yyyy" class="dateboxes" name="yyyy">
                 </div>
                 
                 <br>
@@ -34,5 +36,10 @@
             </fieldset>  
         </form>     
     </div> 
+
+
+    <script src="script.js">
+
+    </script>
 </body>
 </html>
