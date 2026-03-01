@@ -173,3 +173,44 @@ function validatebloodgroup() {
     alert('Blood group selected: ' + dropdown.value);
     return true;
 }
+
+
+// 7.html
+function validateprofilepicture() {
+    // Get User ID value
+    const userid = document.getElementById('useridbox').value;
+    
+    // UserId cannot be empty
+    if (userid.trim() === '') {
+        alert('User ID cannot be empty');
+        return false;
+    }
+    
+    // UserId has to be a positive number
+    const userIdNum = parseInt(userid);
+    
+    // Check if it's a valid number
+    if (isNaN(userIdNum)) {
+        alert('User ID must be a number');
+        return false;
+    }
+    
+    // Check if it's positive
+    if (userIdNum <= 0) {
+        alert('User ID must be a positive number');
+        return false;
+    }
+    
+    // Picture cannot be empty
+    const picture = document.getElementById('profilepicture');
+    
+    // Check if a file is selected
+    if (picture.files.length === 0) {
+        // .files property is used with <input type="file"> elements to get information about the file(s) a user has selected
+        alert('Please select a profile picture');
+        return false;
+    }
+    
+    alert('Profile picture uploaded successfully!');
+    return true;
+}
