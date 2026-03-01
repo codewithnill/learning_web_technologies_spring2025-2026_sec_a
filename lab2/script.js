@@ -1,3 +1,4 @@
+// for 1.html
 function validateName() { // for 1.html name validation
     const name = document.getElementById('namebox1').value;
     // document.getElementById('namebox1') -> Finds an HTML element by its id attribute (like finding a box by its label)
@@ -35,6 +36,7 @@ function validateName() { // for 1.html name validation
     return true;
 }
 
+// for 2.html
 function validateEmail() {
     const email = document.getElementById('emailbox1').value;
     
@@ -64,4 +66,19 @@ function validateEmail() {
     
     alert('Valid email!');
     return true;
+}
+
+// 3.html
+function validateGender() {
+    const genderRadios = document.getElementsByName('gender'); // This returns a NodeList (collection) of all elements that have name="gender".
+    
+    for (let i = 0; i < genderRadios.length; i++) {
+        if (genderRadios[i].checked) { // The checked property sets or returns the checked state of a checkbox/radio
+            alert('Gender selected!');
+            return true; // gender selected, valid!
+        }
+    }
+    
+    alert('Please select a gender');
+    return false; // No selection found
 }
