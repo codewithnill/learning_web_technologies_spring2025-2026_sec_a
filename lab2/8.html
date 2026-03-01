@@ -7,37 +7,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form>
-        <table border="3" width="40%">
-        <tr>
+    <form onsubmit="return validateprofile()">
+        <table border="3" width="50%">
+        <tr class="tablerows">
             <th colspan="3" id="tableheader">Person Profile</th>
         </tr>
-        <tr>
+        <tr class="tablerows">
             <td>
                 Name
             </td>
              <td>
-                 <input type="text" id="namebox" name="name" required>
+                 <input type="text" id="namebox" name="name">
             </td>
-            <td>
+            <td class="tabledata">
 
             </td>
         </tr>
 
-        <tr>
+        <tr class="tablerows">
             <td>
                 Email
             </td>
              <td>
-                 <input type="text" id="namebox" name="name" required>
+                 <input type="text" id="emailbox" name="email">
             </td>
-            <td>
+            <td class="tabledata">
 
             </td>
         </tr>
 
 
-        <tr>
+        <tr class="tablerows">
             <td>
                 Gender
             </td>
@@ -51,51 +51,52 @@
                 <input type="radio" id="g3" name="gender" value="other">
                 <label for="g3">Other</label>
             </td>
-            <td>
+            <td class="tabledata">
 
             </td>
         </tr>
 
 
 
-        <tr>
+        <tr class="tablerows">
             <td>
                 Date of birth
             </td>
              <td>
                
-                <input type="text" id="tb1" class="textbox" name="dd">
+                <input type="text" id="dd" class="dob_box" name="dd">
                 <label>/</label>
-                <input type="text" id="tb2" class="textbox" name="mm">
+                <input type="text" id="mm" class="dob_box" name="mm">
                 <label>/</label>
-                <input type="text" id="tb3" class="textbox" name="yyyy">
+                <input type="text" id="yyyy" class="dob_box" name="yyyy">
                 <label>
                     <i>(dd/mm/yyyy)</i>
                 </label>
             </td>
-            <td>
+            <td class="tabledata">
 
             </td>
         </tr>
 
 
-         <tr>
+         <tr class="tablerows">
             <td>
                 Blood Group
             </td>
              <td>
                 <select id="bloodgroup" name="bloodgroup">
+                    <option value="">Select blood group</option>
                     <option value="O+">O+</option>
                     <option value="O-">O-</option>
                 </select>
             </td>
-            <td>
+            <td class="tabledata">
 
             </td>
         </tr>
 
 
-        <tr>
+        <tr class="tablerows">
             <td>
                 Degree
             </td>
@@ -106,13 +107,13 @@
                 <input type="checkbox" id="hsc" name="degree" value="hsc">
                 <label for="hsc">HSC</label>
                 
-                <input type="checkbox" id="bsc" name="bsc">
+                <input type="checkbox" id="bsc" name="degree" value="bsc">
                 <label for="bsc">BSc</label>
 
-                <input type="checkbox" id="msc" name="msc">
+                <input type="checkbox" id="msc" name="degree" value="msc">
                 <label for="msc">MSc</label>
             </td>
-            <td>
+            <td class="tabledata">
 
             </td>
         </tr>
@@ -120,25 +121,25 @@
 
 
 
-        <tr>
+        <tr class="tablerows">
             <td>
                 Photo
             </td>
              <td>
                <input type="file" id="file" name="file" value="photo">
             </td>
-            <td>
+            <td class="tabledata">
 
             </td>
         </tr>
 
-        <tr>
+        <tr class="tablerows">
             <td colspan="3">
 
             </td>
         </tr>
 
-        <tr>
+        <tr class="tablerows">
             <td colspan="3">
                 <input type="submit" value="Submit">
                 <input type="reset" value="Reset">
@@ -149,6 +150,11 @@
 
      </table>
     </form>
+
+
+    <script src="script2.js">
+        
+    </script>
      
 </body>
 </html>
