@@ -8,8 +8,8 @@
 </head>
 <body>
     <div class="degree">
-        <form>
-            <fieldset id="fieldset5">
+        <form onsubmit="return validatedegree()">
+            <fieldset id="degreeset">
                 <legend>Degree :</legend>
                 
                 <input type="checkbox" id="ssc" name="degree" value="ssc">
@@ -18,14 +18,20 @@
                 <input type="checkbox" id="hsc" name="degree" value="hsc">
                 <label for="hsc">HSC</label>
                 
-                <input type="checkbox" id="bsc" name="bsc">
+                <input type="checkbox" id="bsc" name="degree">
                 <label for="bsc">BSc</label>
                 
                 <br>
             </fieldset>  
             
-            <input type="submit" id="submit5" value="Submit">
+            <input type="submit" id="submitdegree" value="Submit">
         </form>     
     </div> 
+
+
+
+    <script src="script.js">
+
+    </script>
 </body>
 </html>
