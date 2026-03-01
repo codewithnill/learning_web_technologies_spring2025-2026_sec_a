@@ -9,16 +9,25 @@
 <body>
     <div class="degree">
         <br>
-        <form>
-            <label id="bloodgroup">Blood Group </label>
-            <select id="bloodgroup" name="bloodgroup">
-                <option value="O+">O+</option>
-                <option value="O-">O-</option>
-            </select>
-            <br>
-            <hr>
+        <form onsubmit="return validatebloodgroup()">
+            <fieldset id="bloodgroupset">
+                <label>Blood Group </label>
+                <select id="bloodgroup" name="bloodgroup">
+                    <option value="">Select blood group</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select>
+                <br>
+                <hr>
+            </fieldset>
+            
             <input type="submit" value="Submit">
         </form>     
     </div> 
+
+
+    <script src="script.js">
+
+    </script>
 </body>
 </html>
