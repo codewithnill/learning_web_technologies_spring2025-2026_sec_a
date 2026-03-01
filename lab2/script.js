@@ -82,3 +82,50 @@ function validateGender() {
     alert('Please select a gender');
     return false; // No selection found
 }
+
+
+// 4.html
+function validatedob() {
+    // Get values from input fields
+    const day = document.getElementById('dd').value;
+    const month = document.getElementById('mm').value;
+    const year = document.getElementById('yyyy').value;
+    
+    if (day.trim() === '' || month.trim() === '' || year.trim() === '') {
+        alert('All fields (dd/mm/yyyy) cannot be empty');
+        return false;
+    }
+    
+    // parseInt() -> Converts string to number
+    const d = parseInt(day);
+    const m = parseInt(month);
+    const y = parseInt(year);
+    
+    // isNaN (is not a number) -> Checks if it's a valid number
+    // returns true if a value is NaN
+    if (isNaN(d) || isNaN(m) || isNaN(y)) {
+        alert('Please enter valid numbers only');
+        return false;
+    }
+    
+    // dd: 0-31
+    if (d < 1 || d > 31) {
+        alert('Day (dd) must be between 1 and 31');
+        return false;
+    }
+    
+    // mm: 1-12
+    if (m < 1 || m > 12) {
+        alert('Month (mm) must be between 1 and 12');
+        return false;
+    }
+    
+    // yyyy: 1900-2016
+    if (y < 1900 || y > 2016) {
+        alert('Year (yyyy) must be between 1900 and 2016');
+        return false;
+    }
+    
+    alert('Valid date of birth!');
+    return true;
+}
