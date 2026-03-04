@@ -1,0 +1,48 @@
+/* .sec{
+    background-color: blue;
+} */
+
+.container{
+    max-width: 400px;
+    margin: 10vh auto 0 auto;
+}
+
+.display{
+    text-align: right;
+    height: 70px;
+    line-height: 70px;
+    padding: 16px 8px;
+    font-size: 25px;
+    
+}
+
+.allbuttons{
+    display: grid;
+    border-bottom: 1px solid grey;
+    border-left: 1px solid grey;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.allbuttons > div {
+    border-top: 1px solid grey;
+    border-right: 1px solid grey;
+}
+
+.buttons{
+    border: 0.5px solid grey;
+    line-height: 50px;
+    text-align: center;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#eq{
+    background-color: aqua;
+    color: white;
+}
+
+.buttons:hover{
+    background-color: orangered;
+    color: white;
+}
+
