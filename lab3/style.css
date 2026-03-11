@@ -1,0 +1,96 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.page{ 
+    /* parent div */
+    background-color: crimson;
+    height: 100vh; 
+    /* taking full page */
+    padding-top: 1px;
+}
+
+
+.game_title{
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 7%;
+}
+
+
+.display_player{
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+
+.hide{
+    /* utility class for hiding elements */
+    display: none;
+}
+
+
+
+
+.container{
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 33% 33% 33%; 
+    grid-template-columns: 33% 33% 33%; 
+    max-width: 300px;
+}
+
+
+
+
+.grid_tile{
+    border: 1px solid white;
+    min-width: 100px;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+
+
+.playerX{
+    color: aqua;
+}
+
+
+
+.playerO{
+    color: chartreuse;
+}
+
+
+
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+}
+
+
+
+.reset{
+    background-color: seagreen;
+    color: white;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    font-size: 20px;
+    margin-left: 1em;
+    cursor: pointer;
+}
