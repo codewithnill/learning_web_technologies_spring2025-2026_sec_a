@@ -1,0 +1,37 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+
+.up_label{
+    position: relative;
+    top: 5px;
+}
+
+#quantity_input{
+    position: relative;
+    top: 20px;
+}
+
+#total{
+    width: 10%;
+    position: relative;
+    top: 10px;
+}
+
+.total_label{
+    position: relative;
+    top: 10px;
+}
+
+#quantity{
+    width: 10%;
+    position: relative;
+    left: 10px;
+}
