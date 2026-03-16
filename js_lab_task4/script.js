@@ -37,8 +37,9 @@ function update_total() {
     }
 }
 
-// Add event listener for quantity input changes
+// Initial calculation (for default value 0)
+// whenever the user types something in the quantity input or clicks the spinner arrows, the update_total() function is called
+// so that the total updates automatically. 
 quantityInput.addEventListener('input', update_total);
 
-// Initial calculation (for default value 0)
-update_total();
+update_total(); // runs the function immediately when the page loads
