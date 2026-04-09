@@ -6,8 +6,11 @@
     <title>5</title>
 </head>
 <body>
-    <?php
-   
+    
+</body>
+</html>
+
+<?php
     $num = 11; 
 
     echo "Odd numbers between 10 and 100 are: <br>";
@@ -16,7 +19,4 @@
         echo $num . " ";
         $num += 2; 
     }
-    
 ?>
-</body>
-</html>
