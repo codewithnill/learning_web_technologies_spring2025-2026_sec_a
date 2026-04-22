@@ -7,14 +7,14 @@
 </head>
 <body>
     <a href="A.php">Home | </a>
-    <a href="https://www.example.com">Login |</a>
+    <a href="C.php">Login |</a>
     <a href="B.php">Registration</a>
     <br><br>
 
     <fieldset>
         <legend><strong>Login</strong></legend>
-        <label>Username : </label><input type="text" name="name" placeholder="username"><br><hr>
-        <label>Password : </label><input type="password" name="password" placeholder="password"><br><hr>
+        <label>Username : </label><input type="text" name="name" ><br><hr>
+        <label>Password : </label><input type="password" name="password"><br><hr>
     </fieldset>
         
         <hr>

@@ -13,10 +13,10 @@
 
     <fieldset>
         <legend><strong>Registration</strong></legend>
-        <label>Name : </label><input type="text" name="name" placeholder="Name"><br><hr>
-        <label>Email : </label><input type="email" name="email" placeholder="Email"><br><hr>
-        <label>Password : </label><input type="password" name="password" placeholder="Password"><br><hr>
-        <label>Confirm Password : </label><input type="password" name="confirm_password" placeholder="Confirm Password"><br><hr>
+        <label>Name : </label><input type="text" name="name"><br><hr>
+        <label>Email : </label><input type="email" name="email"><br><hr>
+        <label>Password : </label><input type="password" name="password"><br><hr>
+        <label>Confirm Password : </label><input type="password" name="confirm_password"><br><hr>
         <fieldset>
             <legend>Gender</legend>
             <input type="radio" name="gender" value="male"> Male
