@@ -13,8 +13,12 @@
 
     <fieldset>
         <legend><strong>Login</strong></legend>
-        <label>Username : </label><input type="text" name="name" ><br><hr>
+        <label>Username : </label><input type="text" name="name" ><br><br>
         <label>Password : </label><input type="password" name="password"><br><hr>
+        <input type="checkbox" name="remember_me"> Remember Me <br>
+        <button>Submit</button>
+        <a href="D.php">Forgot Password?</a>
+
     </fieldset>
         
         <hr>
