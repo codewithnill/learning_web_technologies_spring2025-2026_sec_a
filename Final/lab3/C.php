@@ -1,3 +1,50 @@
+<!-- login -->
+
+<?php
+    session_start();
+    
+    
+    if(isset($_SESSION['status']) && $_SESSION['status'] == true){
+        header('location: logged_in_dashboard.php');
+        exit();
+    }
+    
+    $error = "";
+    
+    if(isset($_POST['submit'])){
+        $username = $_REQUEST['username'];
+        $password = $_REQUEST['password'];
+        
+        if($username == "" || $password == ""){
+            $error = "Username and Password are required!";
+        }
+        else{
+            // Search for user in session array
+            $user_found = false;
+            if(isset($_SESSION['all_users'])){
+                foreach($_SESSION['all_users'] as $user){
+                    if(($user['username'] == $username || $user['email'] == $username) && $user['password'] == $password){
+                        $user_found = true;
+                        $_SESSION['username'] = $user['username'];
+                        $_SESSION['email'] = $user['email'];
+                        $_SESSION['gender'] = $user['gender'];
+                        $_SESSION['dob'] = $user['dob'];
+                        $_SESSION['profile_picture'] = $user['profile_picture'];
+                        $_SESSION['status'] = true;
+                        
+                        header('location: logged_in_dashboard.php');
+                        exit();
+                    }
+                }
+            }
+            
+            if(!$user_found){
+                $error = "Invalid username/email or password!";
+            }
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,25 +58,23 @@
     <a href="B.php">Registration</a>
     <br><br>
 
-    <fieldset>
-        <legend><strong>Login</strong></legend>
-        <label>Username : </label><input type="text" name="name" ><br><br>
-        <label>Password : </label><input type="password" name="password"><br><hr>
-        <input type="checkbox" name="remember_me"> Remember Me <br>
-        <button>Submit</button>
-        <a href="D.php">Forgot Password?</a>
+    <?php
+        if($error != ""){
+            echo '<p style="color:red;">' . $error . '</p>';
+        }
+    ?>
 
-    </fieldset>
-        
-        <hr>
-        <button>Submit</button>
+    <form method="post" action="">
+        <fieldset>
+            <legend><strong>Login</strong></legend>
+            <label>Username : </label><input type="text" name="username"><br><br>
+            <label>Password : </label><input type="password" name="password"><br><hr>
+            <input type="checkbox" name="remember_me"> Remember Me <br>
+            <input type="submit" name="submit" value="Submit">
+            <a href="D.php">Forgot Password?</a>
+        </fieldset>
+    </form>
 
-    </fieldset>
-
-    <h5>Copyright ©2017</h5>
+    <h5>Copyright © 2017</h5>
 </body>
 </html>
-
-<?php
-    // echo "Welcome to X company."; 
-?>
