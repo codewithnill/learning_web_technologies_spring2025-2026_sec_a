@@ -1,3 +1,12 @@
+<?php
+    // session_start();
+    
+    // if(isset($_SESSION['status']) && $_SESSION['status'] == true){
+    //     header('location: logged_in_dashboard.php'); // go to dashboard if already logged in
+    //     exit();
+    // }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
