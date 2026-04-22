@@ -7,7 +7,7 @@
 </head>
 <body>
     <a href="A.php">Home | </a>
-    <a href="https://www.example.com">Login |</a>
+    <a href="C.php">Login |</a>
     <a href="B.php">Registration</a>
     <br><br>
 

@@ -6,8 +6,8 @@
     <title>Public home</title>
 </head>
 <body>
-    <a href="https://www.example.com">Home | </a>
-    <a href="https://www.example.com">Login |</a>
+    <a href="A.php">Home | </a>
+    <a href="C.php">Login |</a>
     <a href="B.php">Registration</a>
     <br><br>
 
