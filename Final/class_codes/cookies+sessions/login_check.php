@@ -9,7 +9,7 @@
         } else {
 
             if($username == $_SESSION['user']['username'] && $password == $_SESSION['user']['password']) {
-                $_SESSION['username'] = $username;
+                $_SESSION['user']['username'] = $username;
                 $_SESSION['status'] = true;
                 setcookie('status', true, time()+100, '/');
                 header('location: home.php');
