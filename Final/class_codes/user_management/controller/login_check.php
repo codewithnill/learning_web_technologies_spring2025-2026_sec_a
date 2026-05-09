@@ -14,6 +14,7 @@
             if($status) {
                 $_SESSION['username'] =$username;
                 $_SESSION['status'] = true;
+                
                 setcookie('status', true, time()+200, '/');
                 header('location: ../view/home.php');
             } else {
@@ -22,5 +23,6 @@
         }
     } else {
         header('location: ../view/login.php');
+        exit();
     }
 ?>
