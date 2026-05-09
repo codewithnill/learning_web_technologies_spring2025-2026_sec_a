@@ -1,28 +1,24 @@
 <?php
     session_start();
-    require_once('../model/user_model.php');
+    require_once('../model/employer_model.php');
 
-    if(isset($_POST['submit'])){ // checks if submit button clicked
-        $username = $_REQUEST['username'];
-        $password = $_REQUEST['password'];
-
-        if($username == "" || $password == ""){
-            echo "null username/password";
-        } else { // store the values
-            $user = ['username'=>$username, 'password'=> $password];
-            $status = login($user); // ???
-
-            if($status){
-                $_SESSION['username']=$username;
-                $_SESSION['status']= true;
-                setcookie('status', true, time()+10, '/');
-                header('location: ../view/home.php');
-
-            }else{
-                echo "invalid user!";
+    if(isset($_POST['submit'])) {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        
+        if($username == "" || $password == "") {
+            echo "Username and Password cannot be empty!";
+        } else {
+            $status = loginAdmin($username, $password);
+            if($status) {
+                $_SESSION['admin'] = $username;
+                $_SESSION['status'] = true;
+                setcookie('status', 'true', time()+3600, '/');
+                header('location: ../view/admin_home.php');
+            } else {
+                echo "Invalid username or password!";
             }
         }
-
     } else {
         header('location: ../view/login.php');
     }
