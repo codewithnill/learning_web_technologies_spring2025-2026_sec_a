@@ -1,16 +1,15 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Admin Login</title>
 </head>
 <body>
-    <form method="post" action="../controller/loginCheck.php" enctype="">
-        Username: <input type="text" name="username" value=""/> <br>
-        Password: <input type="password" name="password" value=""/> <br>
-        <input type="submit" name="submit" value="Submit"/>
+    <h2>Admin Login</h2>
+    <form method="POST" action="../controller/login_check.php">
+        Username: <input type="text" name="username" required/> <br>
+        Password: <input type="password" name="password" required/> <br>
+        <input type="submit" name="submit" value="Login"/>
     </form>
-    <a href="signup.php">signup</a>
 </body>
 </html>
