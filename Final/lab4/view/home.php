@@ -1,23 +1,22 @@
 <?php
     session_start();
-    if(!isset($_COOKIE['status']) || !isset($_SESSION['username'])){ 
-        header('location: login.php'); // redirect to login page if not signed in
+    if(!isset($_COOKIE['status'])) {
+        header('location: login.php');
+        exit();
     }
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home page</title>
+    <title>Admin Home</title>
 </head>
 <body>
-    <h1>Welcome,   
-        <?php 
-            echo " " . $_SESSION['username']; // print the user name
-        ?>
-    </h1>
-    <a href="logout.php">Logout</a>
+    <h1>Welcome Admin: <?php echo $_SESSION['admin']; ?></h1>
+    <hr>
+    <a href="register_employer.php">Register New Employer</a> <br>
+    <a href="employer_list.php">View All Employers</a> <br>
+    <a href="search.php">Search Employer (AJAX + JSON)</a> <br>
+    <a href="../controller/logout.php">Logout</a>
 </body>
 </html>
