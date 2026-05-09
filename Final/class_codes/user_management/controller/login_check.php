@@ -10,7 +10,7 @@
             echo "null username/password";
         } else {
             $user = ['username' => $username, 'password' => $password];
-            $status = login($user);
+            $status = login($user); // funtion from user_model.php
             if($status) {
                 $_SESSION['username'] =$username;
                 $_SESSION['status'] = true;
