@@ -1,5 +1,9 @@
 <?php
     session_start();
+    if(!isset($_COOKIE['status'])){
+        header('location: login.php');
+        exit();
+    }
     // $users =[
     //     ['id'=>1, 'username'=>'alamin', 'email'=>'alamin@aiub.edu'],
     //     ['id'=>2, 'username'=>'xyz', 'email'=>'xyz@aiub.edu'],
@@ -11,7 +15,7 @@
     
     $users = getAllUser();
 
-    $_SESSION['users']=$users;
+    //$_SESSION['users']=$users;
 ?>
 
 <!DOCTYPE html>
@@ -33,16 +37,16 @@
                 <th>ACTION</th>
             </tr>
         <?php foreach($users as $user){   ?>
-            <tr>
-                <td><?php echo $user['id'];?></td>
-                <td><?=$user['username']?></td>
-                <td><?=$user['email']?></td>
-                <td>
-                    <a href='edit.php?id=<?=$user['id']?>'> EDIT </a> |
-                    <a href='../controller/delete.php?id=<?= $user['id'] ?>'> DELETE </a> |
-                    <a href='details.php'> DETAILS </a>
-                </td>
-            </tr>
+        <tr>
+            <td> <?php echo $user['id'];?> </td>
+            <td> <?php echo $user['username']; ?> </td>
+            <td> <?php echo $user['email']; ?> </td>
+            <td>
+                <a href='edit.php?id=<?php echo $user['id']; ?>'> EDIT </a> |
+                <a href='../controller/delete.php?id=<?php echo $user['id']; ?>'> DELETE </a> |
+                <a href='details.php'> DETAILS </a>
+            </td>
+        </tr>
 
         <?php } ?>
         </table>
